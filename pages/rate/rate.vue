@@ -21,8 +21,8 @@
 					<view class='con_2'>
 						{{item.content}}
 						<view class="img">
-							<block v-for="(url,index) of item.imgs" :key="index" v-if="index<9">
-								<img :src="getimg + url" @click="ViewImage(item.imgs, index)"></img>
+							<block v-for="(img,index) of item.imgs" :key="index">
+								<img v-if="index<9" :src="img.full_url" @click="ViewImage(item.imgs, index)" />
 							</block>
 						</view>
 					</view>

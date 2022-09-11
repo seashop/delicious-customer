@@ -9,10 +9,10 @@ export default {
 	varsionCode: plus.runtime.versionCode,
 	// #endif
 	// #ifndef APP-PLUS
-	version: '1.0.0',
+	version: '0.0.1',
 	// #endif
-	author: "不吃鱼的酸菜不是好厨师",
-	company: "黔域网络技术有限公司",
-	companyEN: "HuiXian"
+	author: "anonymous",
+	company: "Anonymous Company",
+	companyEN: "Anonymous"
 }
 

@@ -85,7 +85,7 @@
 			async uploadImg(index) {
 				const _this = this;
 				await uni.uploadFile({
-					url: _this.api + 'img_category/upload/img',
+					url: _this.api + '/img_category/upload/img',
 					filePath: _this.images[index],
 					name: 'img',
 					formData: {

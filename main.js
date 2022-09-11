@@ -9,7 +9,7 @@ import http from './common/axios.js'
 // import ElementUI from 'element-ui';
 // import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = false
-Vue.prototype.$getimg = Api_url + '/storage'
+Vue.prototype.$getimg = Api_url
 //Vue.use(ElementUI);
 App.mpType = 'app'
 

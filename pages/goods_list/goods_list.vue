@@ -3,7 +3,7 @@
 		<!-- 订单中的商品 -->
 		<view class="goods-panel" v-for="(item,index) in goods" :key="index">
 			<view class="left">
-				<image class="img" :src="getimg + item.pic" mode=""></image>
+				<image class="img" :src="item.pic.full_url" mode=""></image>
 			</view>
 			<view class="right">
 				<view class="goods_name">{{item.goods_name}}</view>

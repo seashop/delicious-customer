@@ -12,7 +12,7 @@
 				<view class="mb-20">我的二维码</view>
 				<!-- #ifdef MP-WEIXIN -->
 				<view class="ewm">
-					<image class="img" :src="ewm_url" mode=""></image>
+					<image class="img" :src="qrcode_url" mode=""></image>
 				</view>
 				<!-- #endif -->
 				
@@ -41,7 +41,7 @@
 			return {
 				api: this.$getimg,
 				info: {},
-				ewm_url: '',
+				qrcode_url: '',
 			}
 		},
 		onLoad(options) {
@@ -59,11 +59,11 @@
 				userModel.get_info().then(res => {
 					_this.info = res.data;
 					// #ifdef H5
-					_this.ewm_url = res.data.h5;
+					_this.qrcode_url = res.data.h5;
 					this.makeMemberCode(res.data.invite_code)
 					// #endif
 					// #ifdef MP-WEIXIN
-					_this.ewm_url = res.data.invite_url;
+					_this.qrcode_url = res.data.invite_url;
 					// #endif
 					
 				})
