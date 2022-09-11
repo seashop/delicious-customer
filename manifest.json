@@ -1,6 +1,6 @@
 {
-    "name" : "如花外卖商城",
-    "appid" : "__UNI__B981D07",
+    "name" : "美点外卖商城",
+    "appid" : "__UNI__7126D79",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -117,7 +117,7 @@
     },
     "h5" : {
         "router" : {
-            "base" : "/h5/" 
+            "base" : "/h5/"
         }
     }
 }

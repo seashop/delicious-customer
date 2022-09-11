@@ -33,7 +33,7 @@
 								</view>
 								<navigator open-type="navigate" :url="'/pages/order/detail?id=' + order.order_id">
 									<view class="images">
-										<image :src="getimg + order.ordergoods[0].pic"></image>
+										<image :src="order.ordergoods[0].pic.full_url"></image>
 										<view class="good_name">{{ order.ordergoods[0].goods_name }}</view>
 									</view>
 									<view class="info">

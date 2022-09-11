@@ -9,7 +9,7 @@
 		</view>
 		<swiper :duration="1000" indicator-dots class="swiper" autoplay :interval="3000">
 			<swiper-item v-for="(image, index) in bannerimgs" :key="index" class="swiper-item">
-				<image :src="getimg+image" class="w-100 h-100"></image>
+				<image :src="image.full_url" class="w-100 h-100"></image>
 			</swiper-item>
 		</swiper>
 		<scroll-view scroll-y class="content">
@@ -78,7 +78,7 @@
 				this.materials = []
 				this.productData = val
 				if (val.bannerimgs) {
-					this.bannerimgs = val.bannerimgs.split(',');
+					this.bannerimgs = val.bannerimgs;
 				}
 				if (val.sku && val.sku.length) {
 					this.sku_id = val.sku[0].sku_id;

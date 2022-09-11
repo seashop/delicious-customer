@@ -16,7 +16,7 @@
 					<view class="list">
 						<view class="item" v-for="(item, index) in cart" :key="index">
 							<view class="left">
-								<image :src="api+item.good.img_id" mode="widthFix" class="image"></image>
+								<image :src="item.good.img_id.full_url" mode="widthFix" class="image"></image>
 							</view>
 							<view class="right">
 								<view class="name-and-materials">

@@ -81,7 +81,7 @@
 						<view class="products">
 							<!-- 商品块 -->
 							<view class="product" v-for="(product, key) in productList" :key="key" @tap="showProductDetailModal(product)">
-								<image :src="getimg+product.img_id" mode="widthFix" class="image"></image>
+								<image :src="product.img_id.full_url" mode="widthFix" class="image"></image>
 								<view class="content">
 									<view class="name">{{ product.name }}</view>
 									<view class="labels">
@@ -608,7 +608,7 @@
 		onShareAppMessage() {
 			let sfm = uni.getStorageSync('sfm')
 			return {
-				title: '如花外卖商城',
+				title: '美点外卖商城',
 				path: '/pages/index/index?sfm='+sfm
 			}
 		}

@@ -6,7 +6,7 @@
 			</view>
 			<view class="d-flex flex-fill flex-column justify-content-between">
 				<view class="d-flex flex-column">
-					<view class="font-size-extra-lg font-weight-bold text-color-base mb-30">欢迎登陆如花-外卖点餐</view>
+					<view class="font-size-extra-lg font-weight-bold text-color-base mb-30">欢迎登陆美点-外卖点餐</view>
 					<view class="font-size-base text-color-assist">登录后消费可获取积分，享受更好的服务体验</view>
 				</view>
 				<view class="d-flex flex-column">
@@ -20,10 +20,10 @@
 					<button type="primary" class="w-100 font-size-lg mb-30" @click="getUserInfo">微信一键登陆</button>
 					<!-- #endif -->
 					<view class="text-center mb-30 font-size-sm text-color-assist">
-						点击登陆如花-外卖点餐，即表示已阅读并同意
-						<font class="text-color-primary">《如花隐私政策》</font>
+						点击登陆美点-外卖点餐，即表示已阅读并同意
+						<font class="text-color-primary">《美点隐私政策》</font>
 					</view>
-					<view class="text-center font-primary font-size-sm text-color-primary">《如花-外卖点餐服务指南》</view>
+					<view class="text-center font-primary font-size-sm text-color-primary">《美点-外卖点餐服务指南》</view>
 				</view>
 			</view>
 		</view>
@@ -36,9 +36,7 @@
 		mapMutations
 	} from 'vuex';
 	import user from '@/api/user.js';
-	import {
-		Api_url
-	} from '../../../config.js'
+	import {Api_url} from '@/common/config'
 
 	export default {
 		name: 'LoginPopup',
@@ -119,7 +117,7 @@
 				const that = this
 				console.log('跳转微信')
 				// #ifdef H5
-				window.location.href = 'http://mail.ruhuashop.com/weixin/gzh_code'
+				window.location.href = Api_url + '/weixin/gzh_code'
 				// #endif
 				// #ifdef MP-WEIXIN
 				//请配置AppID，否则获取失败

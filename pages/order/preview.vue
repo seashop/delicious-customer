@@ -47,10 +47,10 @@
 				</view>
 				<view class="p-bb b-b"></view>
 				<view class="goods-box">
-					<block v-for="(goods,i) in carts" :key="i" v-if="carts">
-						<view class="goods-item">
+					<block v-for="(goods,i) in carts" :key="i">
+						<view class="goods-item" v-if="carts">
 							<view class="left">
-								<image :src="getimg+ goods.good.img_id" mode="aspectFit"></image>
+								<image :src="goods.good.img_id.full_url" mode="aspectFit"></image>
 							</view>
 							<view class="right">
 								<view class="row1">

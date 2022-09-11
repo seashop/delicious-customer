@@ -46,6 +46,7 @@
 <script>
 	import orderModel from '../../api/orderDetail.js'
 	import order from '@/api/orders.js'
+
 	export default {
 		onLoad(option) {
 			if (option.id) {
@@ -80,7 +81,7 @@
 				if (this.orderID) {
 					orderModel.get_one_order(this.orderID).then(res => {
 						that.orderInfo = res.data.order
-						this.orderInfo['expiration_date'] = res.data.order.updated_at
+						that.orderInfo['expiration_date'] = res.data.order.updated_at
 						that.countdown();
 					})
 				}
@@ -107,6 +108,7 @@
 			countdown() {
 				var go_time = new Date((this.orderInfo.expiration_date).replace(/-/g, '/'));
 				var now_time = new Date();
+				console.log('countdown', go_time, now_time, this.orderInfo.expiration_date);
 				if (!go_time.getTime()) {
 					return
 				}
