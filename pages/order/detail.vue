@@ -54,7 +54,7 @@
 						<view class="w-100 d-flex flex-column">
 							<view class="d-flex align-items-center mt-40" v-for="(item, index) in order.order_goods" :key="index">
 								<view class="flex-fill d-flex flex-column">
-									<view class="font-size-base mb-10">{{ item.goods_name }}</view>
+									<view class="font-size-base mb-10">{{ item.title }}</view>
 									<image :src="getimg+item.pic" class="img"></image>
 									<view class="font-size-extra-sm text-color-assist">
 										<text v-if="item.sku_name">{{ item.sku_name }}</text>

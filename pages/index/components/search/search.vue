@@ -45,7 +45,7 @@
 								<image :src="getimg+item.img_id" class="pro-image" />
 							</view>
 							<view class="text">
-								<view class="pro-name">{{ item.goods_name }}</view>
+								<view class="pro-name">{{ item.title }}</view>
 								<view class="pro-name">{{ item.description }}</view>
 							</view>
 							<view class="pro-price">￥{{ item.price }}</view>
@@ -203,7 +203,7 @@
 				}
 				res['number'] = 1
 				res['id'] = res.goods_id
-				res['name'] = res.goods_name
+				res['name'] = res.title
 				return res
 			},
 			// 获取热搜

@@ -361,7 +361,7 @@
 
 				let dat = {
 					id: product.id,
-					name: product.goods_name,
+					name: product.title,
 					price: product.price,
 					good: product,
 					number: product.number || 1,
@@ -511,7 +511,7 @@
 				}
 				res['number'] = 1
 				res['id'] = res.goods_id
-				res['name'] = res.goods_name
+				res['name'] = res.title
 				return res
 			},
 			getperductlist: function(val) {

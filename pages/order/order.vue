@@ -34,7 +34,7 @@
 								<navigator open-type="navigate" :url="'/pages/order/detail?id=' + order.order_id">
 									<view class="images">
 										<image :src="order.ordergoods[0].pic.full_url"></image>
-										<view class="good_name">{{ order.ordergoods[0].goods_name }}</view>
+										<view class="good_name">{{ order.ordergoods[0].title }}</view>
 									</view>
 									<view class="info">
 										<view class="left">
@@ -92,7 +92,7 @@
 											<navigator open-type="navigate" :url="'/pages/order/detail?id=' + order.order_id">
 												<view class="images">
 													<image :src="order.ordergoods[0].pic.full_url"></image>
-													<view class="good_name">{{ order.ordergoods[0].goods_name }}</view>
+													<view class="good_name">{{ order.ordergoods[0].title }}</view>
 												</view>
 												<view class="info">
 													<view class="left">
@@ -148,7 +148,7 @@
 											<navigator open-type="navigate" :url="'/pages/order/detail?id=' + order.order_id">
 												<view class="images">
 													<image :src="order.ordergoods[0].pic.full_url"></image>
-													<view class="good_name">{{ order.ordergoods[0].goods_name }}</view>
+													<view class="good_name">{{ order.ordergoods[0].title }}</view>
 												</view>
 												<view class="info">
 													<view class="left">

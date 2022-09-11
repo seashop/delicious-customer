@@ -14,7 +14,7 @@
 		</swiper>
 		<scroll-view scroll-y class="content">
 			<view class="wrapper">
-				<view class="title">{{productData.goods_name}}</view>
+				<view class="title">{{productData.title}}</view>
 				<view class="mb-10">产品描述</view>
 				<view class="mb-20">{{ productData.description}}</view>
 				<view class="materials" v-if="productData.form" v-for="(item,ind) in materials.tree">
@@ -248,7 +248,7 @@
 				}
 				res['number'] = 0
 				res['id'] = res.goods_id
-				res['name'] = res.goods_name
+				res['name'] = res.title
 
 				return res
 			},

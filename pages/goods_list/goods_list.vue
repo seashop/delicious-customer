@@ -6,7 +6,7 @@
 				<image class="img" :src="item.pic.full_url" mode=""></image>
 			</view>
 			<view class="right">
-				<view class="goods_name">{{item.goods_name}}</view>
+				<view class="title">{{item.title}}</view>
 				<button class="btn" type="primary" size="mini" @tap="jump(item.goods_id)">评论</button>
 			</view>
 		</view>
@@ -84,7 +84,7 @@
 			display: flex;
 			flex-direction: column;
 			
-			.goods_name {
+			.title {
 				width: 500upx;
 				white-space: nowrap;
 				overflow: hidden;
