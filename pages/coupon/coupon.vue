@@ -16,7 +16,7 @@
 							</block>
 	
 							<block v-else>
-								<view class='cou_t_r_02'>有效期：{{item.end_time}}</view>
+								<view class='cou_t_r_02'>有效期：{{ item.end_time }}</view>
 							</block>
 	
 						</view>

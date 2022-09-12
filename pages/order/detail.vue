@@ -5,7 +5,7 @@
 		<view class="content" v-if="Object.keys(order).length>0">
 			<view class="order-box">
 				<image src="/static/images/order/icon_making.png" class="status-icon" />
-				<view class="text-color-primary font-size-lg font-weight-bold mb-10">
+				<view class="mb-10 text-color-primary font-size-lg font-weight-bold">
 					<template v-if="order.order.state == 0">
 						订单未完成
 					</template>
@@ -21,7 +21,7 @@
 				</view>
 				<view class="" v-if="order.order.state == 1">
 					<view class="text-color-assist font-size-sm">感谢您的支持，欢迎再次光临</view>
-					<view class="text-color-assist font-size-sm mt-2">取餐码：{{order.order.yzcode}}</view>
+					<view class="mt-2 text-color-assist font-size-sm">取餐码：{{order.order.yzcode}}</view>
 				</view>
 
 			</view>
@@ -36,11 +36,11 @@
 
 						<view class="w-100 d-flex align-items-center" v-if="order.order.drive_type == '配送'">
 
-							<view class="flex-fill d-flex flex-column overflow-hidden">
-								<view class="font-size-lg mb-10">{{ order.order.receiver_name }}</view>
+							<view class="overflow-hidden flex-fill d-flex flex-column">
+								<view class="mb-10 font-size-lg">{{ order.order.receiver_name }}</view>
 								<view class="font-size-extra-sm text-color-assist text-truncate">{{ order.order.receiver_city+order.order.receiver_address }}</view>
 							</view>
-							<view class="d-flex align-items-center ml-20">
+							<view class="ml-20 d-flex align-items-center">
 								<image src="/static/images/order/icon_phone.png" class="phone-icon" @tap="call(order.order.receiver_mobile)"></image>
 							</view>
 						</view>
@@ -52,22 +52,22 @@
 
 					<list-cell padding="0 40rpx" line-right bgcolor="#FFFFFF">
 						<view class="w-100 d-flex flex-column">
-							<view class="d-flex align-items-center mt-40" v-for="(item, index) in order.order_goods" :key="index">
+							<view class="mt-40 d-flex align-items-center" v-for="(item, index) in order.order_goods" :key="index">
 								<view class="flex-fill d-flex flex-column">
-									<view class="font-size-base mb-10">{{ item.title }}</view>
+									<view class="mb-10 font-size-base">{{ item.title }}</view>
 									<image :src="getimg+item.pic" class="img"></image>
 									<view class="font-size-extra-sm text-color-assist">
 										<text v-if="item.sku_name">{{ item.sku_name }}</text>
 									</view>
 								</view>
-								<view class="flex-shrink-0 font-weight-bold ml-40">x{{ item.number }}</view>
-								<view class="flex-shrink-0 font-weight-bold ml-40">￥{{ item.price }}</view>
+								<view class="flex-shrink-0 ml-40 font-weight-bold">x{{ item.number }}</view>
+								<view class="flex-shrink-0 ml-40 font-weight-bold">￥{{ item.price }}</view>
 							</view>
-							<view class="d-flex justify-content-between align-items-center mt-40 pb-30 border-dashed">
+							<view class="mt-40 border-dashed d-flex justify-content-between align-items-center pb-30">
 								<view>商品总价</view>
 								<view>￥{{ order.order.goods_money}}</view>
 							</view>
-							<view class="d-flex justify-content-between align-items-center font-size-lg font-weight-bold mt-30 mb-40">
+							<view class="mb-40 d-flex justify-content-between align-items-center font-size-lg font-weight-bold mt-30">
 								<view>合计</view>
 								<view>￥{{ order.order.order_money }}</view>
 							</view>
@@ -76,7 +76,7 @@
 					<list-cell padding="30rpx 40rpx" last bgcolor="#FFFFFF" style="border-radius: 0 0 30rpx 30rpx;">
 						<view class="w-100 d-flex flex-column font-size-extra-sm text-color-assist">
 							<view class="mb-10">如需退款，请致电门店</view>
-							<view class="mb-10">下单时间：{{ order.order.created_at }}</view>
+							<view class="mb-10">下单时间：{{ order.order.created_at | dateformat }}</view>
 							<view class="mb-10">订单编号：{{ order.order.order_num }}</view>
 							<view class="mb-10">备注信息：{{ order.order.message }}</view>
 						</view>

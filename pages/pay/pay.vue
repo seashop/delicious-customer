@@ -6,11 +6,11 @@
 				<text v-if="countdownStr">支付剩余时间 {{countdownStr}}</text>
 				<text v-else>重新提交订单</text>
 			</view>
-			<view class="row pricebox pt-8">
+			<view class="pt-8 row pricebox">
 				<text class="fh">￥</text>
 				<text class="txt1">{{orderInfo.order_money}}</text>
 			</view>
-			<view class="row pt-4" @click="doOrder">
+			<view class="pt-4 row" @click="doOrder">
 				<text>{{orderInfo.store_name}}</text>
 				<text v-if="orderInfo.store_community">（{{orderInfo.store_community}}）</text>
 				<text>订单详情</text>
@@ -106,9 +106,8 @@
 
 			//倒计时
 			countdown() {
-				var go_time = new Date((this.orderInfo.expiration_date).replace(/-/g, '/'));
+				var go_time = new Date(this.orderInfo.expiration_date);
 				var now_time = new Date();
-				console.log('countdown', go_time, now_time, this.orderInfo.expiration_date);
 				if (!go_time.getTime()) {
 					return
 				}

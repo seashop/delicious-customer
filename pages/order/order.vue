@@ -39,7 +39,7 @@
 									<view class="info">
 										<view class="left">
 											<view>订单编号：{{ order.order_num }}</view>
-											<view>下单时间：{{ order.created_at }}</view>
+											<view>下单时间：{{ order.created_at | dateformat }}</view>
 										</view>
 										<view class="right">￥{{ order.order_money }}</view>
 									</view>
@@ -97,7 +97,7 @@
 												<view class="info">
 													<view class="left">
 														<view>订单编号：{{ order.order_num }}</view>
-														<view>下单时间：{{ order.created_at }}</view>
+														<view>下单时间：{{ order.created_at | dateformat }}</view>
 													</view>
 													<view class="right">￥{{ order.order_money }}</view>
 												</view>
@@ -153,7 +153,7 @@
 												<view class="info">
 													<view class="left">
 														<view>订单编号：{{ order.order_num }}</view>
-														<view>下单时间：{{ order.created_at }}</view>
+														<view>下单时间：{{ order.created_at | dateformat }}</view>
 													</view>
 													<view class="right">￥{{ order.order_money }}</view>
 												</view>
